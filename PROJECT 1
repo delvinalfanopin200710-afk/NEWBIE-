@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Special For My BOCIL</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9ff3, #c56cf0);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+        .box {
+            background: rgba(255,255,255,0.2);
+            padding: 25px;
+            border-radius: 20px;
+            max-width: 450px;
+            margin: auto;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+        button {
+            background: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        pre {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Special For My BOCILLLLLLL</h1>
+
+<div class="box" id="content">
+    <p>Isi nama kamu yang bener cilllll</p>
+    <input type="text" id="nama" placeholder="Masukkan nama">
+    <button onclick="cekNama()">Lanjut</button>
+</div>
+
+<script>
+let allowed = ["melisa","lisa","mellisa","amel","mel","bocil"];
+let jawabImut = ["IYA","YA","YEK","YEKK","YYY","YAA","YE","YEE","IYAA","YEKKK","YAKH","YESS","YES","YAH","IY","Y"];
+
+function cekNama(){
+    let nama = document.getElementById("nama").value.toLowerCase().trim();
+    if(allowed.includes(nama)){
+        document.getElementById("content").innerHTML = `
+        <p>hallooooo bocilllll IMUUUTTTT,this is your bot bear :p</p>
+        <p>1+1 = ?</p>
+        <input type="text" id="jawab">
+        <button onclick="cekJawaban()">Jawab</button>
+        `;
+    } else {
+        alert("uuuuuuu bocilllll salah");
+    }
+}
+
+function cekJawaban(){
+    let j = document.getElementById("jawab").value.toLowerCase().trim();
+    if(j == "2" || j == "dua"){
+        document.getElementById("content").innerHTML = `
+        <p>apakah beruangmu imut??</p>
+        <input type="text" id="imut">
+        <button onclick="cekImut()">Jawab</button>
+        `;
+    } else {
+        alert("1+1 pun salahhh UUUUUUUUUU");
+    }
+}
+
+function cekImut(){
+    let y = document.getElementById("imut").value.toUpperCase().trim();
+    if(jawabImut.includes(y)){
+        document.getElementById("content").innerHTML = `
+        <p>waw...maacihh bocil juga imutt bangettt,,AWWWWWW</p>
+        <p>Kapan ulang tahun beruangmu?</p>
+        <p>A.15/3/2010<br>B.5/3/2010</p>
+        <input type="text" id="ultah" placeholder="A atau B">
+        <button onclick="cekUltah()">Jawab</button>
+        `;
+    } else {
+        alert("Ohhhhh nooooooo bocilll slaahhhhhhh");
+    }
+}
+
+function cekUltah(){
+    let u = document.getElementById("ultah").value.toUpperCase().trim();
+    if(u == "A"){
+        document.getElementById("content").innerHTML = `
+        <p>YATTTAAAAAAA.....kamu masih ingettt</p>
+        <p>Last Questionnnn</p>
+        
+        <p>apa yang paling beruangmu ini sukai?</p>
+        <p>A.matcha<br>B.mie ayam<br>C.nasgor<br>D.You</p>
+        <input type="text" id="last" placeholder="A/B/C/D">
+        <button onclick="cekLast()">Jawab</button>
+        `;
+    } else if(u == "B"){
+        alert("Yahhhhhhhhh lupaaaa niiiiii");
+    } else {
+        alert("salahhh");
+    }
+}
+
+function cekLast(){
+    let l = document.getElementById("last").value.toUpperCase().trim();
+    if(l == "D"){
+        document.getElementById("content").innerHTML = `
+        <h2>BOCIL IMUTTTTTTTTTTTTT  💛</h2>
+<pre>
+  <pre>
+   <pre style="font-size:14px; line-height:1.2; font-family:monospace;">
+   👑
+  ʕ•ᴥ•ʔ
+  (     )
+ (  づ💛づ  )
+</pre>
+        <p>YAAAAAYYYY BENERRRR </p>
+        <p>Beruangmu ini mau peluk kamuuuuu (from:bot beruang 🐻</p>
+        `;
+    } else {
+        alert("TETOTTTTT");
+    }
+}
+</script>
+
+</body>
+</html>
